@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dilmnqvovpnmlib/static/css/main.5f361e03.chunk.css",
+    "main.js": "/dilmnqvovpnmlib/static/js/main.21094327.chunk.js",
+    "main.js.map": "/dilmnqvovpnmlib/static/js/main.21094327.chunk.js.map",
+    "runtime-main.js": "/dilmnqvovpnmlib/static/js/runtime-main.29ab7a04.js",
+    "runtime-main.js.map": "/dilmnqvovpnmlib/static/js/runtime-main.29ab7a04.js.map",
+    "static/js/2.954ce5c9.chunk.js": "/dilmnqvovpnmlib/static/js/2.954ce5c9.chunk.js",
+    "static/js/2.954ce5c9.chunk.js.map": "/dilmnqvovpnmlib/static/js/2.954ce5c9.chunk.js.map",
+    "index.html": "/dilmnqvovpnmlib/index.html",
+    "precache-manifest.9a3e105477a22f376c7c6a7c03482003.js": "/dilmnqvovpnmlib/precache-manifest.9a3e105477a22f376c7c6a7c03482003.js",
+    "service-worker.js": "/dilmnqvovpnmlib/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/dilmnqvovpnmlib/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.954ce5c9.chunk.js.LICENSE.txt": "/dilmnqvovpnmlib/static/js/2.954ce5c9.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/dilmnqvovpnmlib/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.29ab7a04.js",
+    "static/js/2.954ce5c9.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.21094327.chunk.js"
+  ]
+}
