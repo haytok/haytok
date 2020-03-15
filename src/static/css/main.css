@@ -20,3 +20,9 @@ a {
 h1 {
   font-size: 32px;
 }
+
+.logo {
+  height: 34px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
