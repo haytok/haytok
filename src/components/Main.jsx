@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { Menu, Layout, Row, Col, Tag } from "antd";
+import { Menu, Layout, Row, Col, Tag, Avatar } from "antd";
 import "antd/es/menu/style";
 import {
   HomeOutlined,
@@ -87,80 +87,86 @@ class Main extends React.Component {
             id="about"
             style={{ margin: "24px 16px 0", overflow: "initial" }}
           >
-            <h1 style={{ textAlign: "center" }}>About</h1>
-            <Row>
-              <Col span={3}></Col>
-              <Col span={3}></Col>
-              <Col span={3}></Col>
-              {/* <Col span={3}>
-              </Col> */}
-              <Col span={6} style={{ display: "flex" }}>
-                <div>
-                  <img src={Icon} />
-                </div>
-                <div>
-                  <table border="0">
-                    <tr></tr>
-                    <tr>
-                      <td align="center">Name</td>
-                      <td align="left">dilmnqvovpnmlib</td>
-                    </tr>
-                    <tr>
-                      <td align="center">University</td>
-                      <td align="left">
-                        <a
-                          href="http://www1b.comm.eng.osaka-u.ac.jp/"
-                          target="_blank"
-                        >
-                          大阪大学大学院工学研究科電気電子情報通信工学専攻
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">
-                        <TwitterOutlined />
-                      </td>
-                      <td align="left">
-                        <a
-                          href="https://twitter.com/bilmnpvovqnmlid"
-                          target="_blank"
-                        >
-                          bilmnpvovqnmlid
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">
-                        <GithubOutlined />
-                      </td>
-                      <td align="left">
-                        <a
-                          href="https://github.com/dilmnqvovpnmlib"
-                          target="_blank"
-                        >
-                          dilmnqvovpnmlib
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center">
-                        <GitlabOutlined />
-                      </td>
-                      <td align="left">
-                        <a
-                          href="https://gitlab.com/dilmnqvovpnmlib"
-                          target="_blank"
-                        >
-                          dilmnqvovpnmlib
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </Col>
-              <Col span={3}></Col>
-              <Col span={3}></Col>
-            </Row>
+            <h1
+              style={{
+                textAlign: "center"
+                // display: "flex",
+                // alignItems: "center"
+                // flexDirection: "column"
+                // justifyContent: "center"
+              }}
+            >
+              About
+            </h1>
+            <div
+              style={{
+                textAlign: "center"
+              }}
+            >
+              <Avatar src={Icon} size={128} />
+            </div>
+            <div
+              style={{
+                textAlign: "center"
+              }}
+            >
+              <table border="0" align="center">
+                <tr>
+                  <th align="left">Name</th>
+                  <td align="left">dilmnqvovpnmlib</td>
+                </tr>
+                <tr>
+                  <th align="left">University</th>
+                  <td align="left">
+                    <a
+                      href="http://www1b.comm.eng.osaka-u.ac.jp/"
+                      target="_blank"
+                    >
+                      大阪大学大学院 M1
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <TwitterOutlined />
+                  </th>
+                  <td align="left">
+                    <a
+                      href="https://twitter.com/bilmnpvovqnmlid"
+                      target="_blank"
+                    >
+                      bilmnpvovqnmlid
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <GithubOutlined />
+                  </th>
+                  <td align="left">
+                    <a
+                      href="https://github.com/dilmnqvovpnmlib"
+                      target="_blank"
+                    >
+                      dilmnqvovpnmlib
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th align="left">
+                    <GitlabOutlined />
+                  </th>
+                  <td align="left">
+                    <a
+                      href="https://gitlab.com/dilmnqvovpnmlib"
+                      target="_blank"
+                    >
+                      dilmnqvovpnmlib
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </Content>
           <Content
             id="experiences"
@@ -182,7 +188,7 @@ class Main extends React.Component {
                     className="vertical-timeline-element-title"
                     style={{ textAlign: "left" }}
                   >
-                    大阪大学 工学 部電子情報工学科入学
+                    大阪大学 工学部 電子情報工学科 入学
                   </h2>
                 </VerticalTimelineElement>
 
@@ -196,7 +202,7 @@ class Main extends React.Component {
                     className="vertical-timeline-element-title"
                     style={{ textAlign: "left" }}
                   >
-                    大阪大学生活協同組合エンジニアアルバイト
+                    大阪大学 生活協同組合 エンジニア アルバイト
                   </h2>
                   <p style={{ textAlign: "left" }}>
                     Angular, Django Rest Framework を用いて
@@ -237,7 +243,7 @@ class Main extends React.Component {
                     className="vertical-timeline-element-title"
                     style={{ textAlign: "left" }}
                   >
-                    いい生活 エンジニアサマーインターン 参加
+                    いい生活 エンジニア サマーインターン 参加
                   </h2>
                   <p style={{ textAlign: "left" }}>
                     {/* Strategy, Social MediaStrategy, Social MediaStrategy, Social */}
@@ -288,7 +294,7 @@ class Main extends React.Component {
                     className="vertical-timeline-element-title"
                     style={{ textAlign: "left" }}
                   >
-                    Artill エンジニアアルバイト
+                    Artill エンジニア アルバイト
                   </h2>
                   <p style={{ textAlign: "left" }}>
                     {/* Creative Direction, Visual Design */}
