@@ -15,7 +15,7 @@
   "homepage": "http://dilmnqvovpnmlib.github.io/dilmnqvovpnmlib",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "env NODE_ENV='production' next build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
