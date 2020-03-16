@@ -47,7 +47,8 @@ class Main extends React.Component {
         "Angular",
         "Django Rest Framework",
         "Git",
-        "Docker"
+        "Docker",
+        "CI/CD"
       ]
     };
     this.researchContens = {
