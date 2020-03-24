@@ -323,7 +323,7 @@ class Main extends React.Component {
               <p style={{ textAlign: "left" }}>
                 {/* Creative Direction, Visual Design */}
                 React, Redux を用いてアート作品の
-                <a href="http://13.115.35.201/" target="_blank">
+                <a href="http://store.artill.jp/" target="_blank">
                   ECサイト
                 </a>
                 のフロントエンドの開発をしています。
