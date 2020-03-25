@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { Menu, Layout, Row, Col, Tag, Avatar } from "antd";
+import { Menu, Layout, Tag, Avatar, Popover } from "antd";
 import "antd/es/menu/style";
 import {
   HomeOutlined,
@@ -14,11 +14,15 @@ import {
   VerticalTimelineElement
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { createFromIconfontCN } from "@ant-design/icons";
 
 import Icon from "../static/images/images.jpg";
 import "../static/css/main.css";
 
 const { Content, Footer, Header } = Layout;
+const IconFont = createFromIconfontCN({
+  scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
+});
 
 class Main extends React.Component {
   constructor(props) {
@@ -26,13 +30,34 @@ class Main extends React.Component {
     this.state = {
       current: "about"
     };
-    this.menuValues = [
-      { key: "about", value: "About" },
-      { key: "experiences", value: "Experiences" },
-      { key: "skills", value: "Skills" },
-      { key: "research", value: "Research" },
-      { key: "programming", value: "Competition Programming" }
-    ];
+    this.works = {
+      key: "works",
+      value: "Works",
+      data: [
+        {
+          tagName: this.makeATag(
+            "https://www.miraikikin.osaka-u.ac.jp/donation/application",
+            "大阪大学未来基金"
+          ),
+          title: "大阪大学に寄付をするためのシステム",
+          body:
+            "HTML, CSS, TypeScript, Angular, Python, Django Rest Frameworkで作成"
+        },
+        {
+          tagName: this.makeATag(
+            "https://dilmnqvovpnmlib.github.io/dilmnqvovpnmlib/",
+            "Portfolio"
+          ),
+          title: "私のポートフォリオ(このページ)",
+          body: "React, Ant Design, GitHub Pagesで作成"
+        },
+        {
+          tagName: this.makeATag("https://store.artill.jp/", "Artill ECサイト"),
+          title: "アート作品を売買するためのECサイト",
+          body: "React, Reduxで作成中"
+        }
+      ]
+    };
     this.skillsContens = {
       key: "skills",
       value: "Skills",
@@ -52,7 +77,7 @@ class Main extends React.Component {
     };
     this.researchContens = {
       key: "research",
-      value: "Research",
+      value: "Research Keywords",
       data: [
         "光ファイバー通信",
         "ディジタル信号処理",
@@ -62,6 +87,11 @@ class Main extends React.Component {
       ]
     };
   }
+  makeATag = (link, body) => (
+    <a href={link} target="_blank">
+      {body}
+    </a>
+  );
   makeHeader = () => {
     return (
       <Header
@@ -86,13 +116,17 @@ class Main extends React.Component {
             <AppstoreOutlined />
             <a>Experiences</a>
           </Menu.Item>
+          <Menu.Item key="works">
+            <AppstoreOutlined />
+            <a>Works</a>
+          </Menu.Item>
           <Menu.Item key="skills">
             <AppstoreOutlined />
             <a>Skills</a>
           </Menu.Item>
           <Menu.Item key="research">
             <AppstoreOutlined />
-            <a>Research</a>
+            <a>Research Keywords</a>
           </Menu.Item>
           <Menu.Item key="programming">
             <AppstoreOutlined />
@@ -130,7 +164,8 @@ class Main extends React.Component {
               <th align="left">University</th>
               <td align="left">
                 <a href="http://www1b.comm.eng.osaka-u.ac.jp/" target="_blank">
-                  大阪大学 B4
+                  大阪大学 B4 &nbsp;
+                  <IconFont type="icon-tuichu" />
                 </a>
               </td>
             </tr>
@@ -140,7 +175,8 @@ class Main extends React.Component {
               </th>
               <td align="left">
                 <a href="https://twitter.com/bilmnpvovqnmlid" target="_blank">
-                  bilmnpvovqnmlid
+                  bilmnpvovqnmlid &nbsp;
+                  <IconFont type="icon-tuichu" />
                 </a>
               </td>
             </tr>
@@ -150,7 +186,8 @@ class Main extends React.Component {
               </th>
               <td align="left">
                 <a href="https://github.com/dilmnqvovpnmlib" target="_blank">
-                  dilmnqvovpnmlib
+                  dilmnqvovpnmlib &nbsp;
+                  <IconFont type="icon-tuichu" />
                 </a>
               </td>
             </tr>
@@ -160,7 +197,8 @@ class Main extends React.Component {
               </th>
               <td align="left">
                 <a href="https://gitlab.com/dilmnqvovpnmlib" target="_blank">
-                  dilmnqvovpnmlib
+                  dilmnqvovpnmlib &nbsp;
+                  <IconFont type="icon-tuichu" />
                 </a>
               </td>
             </tr>
@@ -188,7 +226,6 @@ class Main extends React.Component {
                 background: "rgb(33, 150, 243)",
                 color: "#fff"
               }}
-              // icon={<WorkIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -205,7 +242,6 @@ class Main extends React.Component {
                 background: "rgb(233, 30, 99)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -214,14 +250,14 @@ class Main extends React.Component {
                 大阪大学 生活協同組合 エンジニア アルバイト
               </h2>
               <p style={{ textAlign: "left" }}>
-                Angular, Django Rest Framework を用いて
+                TypeScript + Angular, Python + Django Rest Framework を用いて
                 <a
                   href="https://www.miraikikin.osaka-u.ac.jp/donation/application"
                   target="_blank"
                 >
                   大学の寄付システム
                 </a>
-                の開発に携わっていました。
+                の開発に2年間携わっていました。
               </p>
             </VerticalTimelineElement>
 
@@ -232,16 +268,22 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
                 style={{ textAlign: "left" }}
               >
-                ICPC 国内予選参加
+                <a
+                  href="https://icpc.iisf.or.jp/2019-yokohama/first-round-result/"
+                  target="_blank"
+                >
+                  ICPC 国内予選&nbsp;
+                </a>
+                参加
               </h2>
               <p style={{ textAlign: "left" }}>
                 予選参加チーム全体で、495チーム中75位、大学中では7チーム中2位でした。
+                チーム名はContrabassでした。
               </p>
             </VerticalTimelineElement>
 
@@ -252,7 +294,6 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -261,7 +302,7 @@ class Main extends React.Component {
                 いい生活 エンジニア サマーインターン 参加
               </h2>
               <p style={{ textAlign: "left" }}>
-                {/* Strategy, Social MediaStrategy, Social MediaStrategy, Social */}
+                自然言語処理を使って不動産のビッグデータ処理を行いました。
               </p>
             </VerticalTimelineElement>
 
@@ -272,7 +313,6 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -281,7 +321,8 @@ class Main extends React.Component {
                 GMOインターネット Webエンジニアリングコース 参加
               </h2>
               <p style={{ textAlign: "left" }}>
-                {/* Creative Direction, User Experience, Visual Design */}
+                Webアプリケーションのデプロイ、保守、
+                運用、監視、自動化、パフォーマンス測定、脆弱性診断を行いました。
               </p>
             </VerticalTimelineElement>
 
@@ -292,7 +333,6 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -312,7 +352,6 @@ class Main extends React.Component {
                 background: "rgb(233, 30, 99)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -321,12 +360,11 @@ class Main extends React.Component {
                 Artill エンジニア アルバイト
               </h2>
               <p style={{ textAlign: "left" }}>
-                {/* Creative Direction, Visual Design */}
                 React, Redux を用いてアート作品の
                 <a href="http://store.artill.jp/" target="_blank">
                   ECサイト
                 </a>
-                のフロントエンドの開発をしています。
+                のフロントエンドの開発を行っています。
               </p>
             </VerticalTimelineElement>
 
@@ -337,7 +375,6 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff"
               }}
-              // icon={<SchoolIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -358,7 +395,6 @@ class Main extends React.Component {
                 background: "rgb(33, 150, 243)",
                 color: "#fff"
               }}
-              // icon={<WorkIcon />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -366,8 +402,42 @@ class Main extends React.Component {
               >
                 大阪大学大学院 工学研究科 電気電子情報通信工学専攻 入学
               </h2>
+              <p style={{ textAlign: "left" }}>
+                光ファイバー通信の研究を行っています。
+              </p>
             </VerticalTimelineElement>
           </VerticalTimeline>
+        </div>
+      </Content>
+    );
+  };
+  content = body => <div style={{ textAlign: "center" }}>{body}</div>;
+  makeWorks = item => {
+    return (
+      <Content
+        id={item.key}
+        style={{ margin: "24px 16px 0", overflow: "initial" }}
+      >
+        <div
+          className="site-layout-background"
+          style={{ padding: 24, textAlign: "center" }}
+        >
+          <h1 style={{ textAlign: "center" }}>{item.value}</h1>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          {item.data.map(item => (
+            <Popover
+              content={this.content(item.body)}
+              title={item.title}
+              color="processing"
+              style={{ textAlign: "center" }}
+            >
+              <Tag color="processing">
+                {item.tagName}&nbsp;
+                <IconFont type="icon-tuichu" />
+              </Tag>
+            </Popover>
+          ))}
         </div>
       </Content>
     );
@@ -409,7 +479,8 @@ class Main extends React.Component {
                 href="https://atcoder.jp/users/dilmnqvovpnmlib?lang=ja"
                 target="_blank"
               >
-                AtCoder Rate : 854
+                AtCoder Rate : 854 &nbsp;
+                <IconFont type="icon-tuichu" />
               </a>
             </Tag>
           </div>
@@ -444,6 +515,7 @@ class Main extends React.Component {
           >
             {this.makeAbout()}
             {this.makeExperiences()}
+            {this.makeWorks(this.works)}
             {this.makeTagContents(this.skillsContens)}
             {this.makeTagContents(this.researchContens)}
             {this.makeProgramming()}
@@ -454,5 +526,4 @@ class Main extends React.Component {
     );
   }
 }
-
 export default Main;
