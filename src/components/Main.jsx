@@ -55,6 +55,14 @@ class Main extends React.Component {
           tagName: this.makeATag("https://store.artill.jp/", "Artill ECサイト"),
           title: "アート作品を売買するためのECサイト",
           body: "React, Reduxで作成中"
+        },
+        {
+          tagName: this.makeATag(
+            "https://baseball-2709f.firebaseapp.com/",
+            "Baseball Data Park"
+          ),
+          title: "野球に関する情報情報を集めたサイト",
+          body: "React, Redux, Firebase, Python + Scrapingで作成中"
         }
       ]
     };
@@ -158,13 +166,13 @@ class Main extends React.Component {
           <table border="0" align="center">
             <tr>
               <th align="left">Name</th>
-              <td align="left">dilmnqvovpnmlib</td>
+              <td align="left">Kiwata Hayato</td>
             </tr>
             <tr>
               <th align="left">University</th>
               <td align="left">
                 <a href="http://www1b.comm.eng.osaka-u.ac.jp/" target="_blank">
-                  大阪大学 B4 &nbsp;
+                  大阪大学大学院 M1&nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
               </td>
