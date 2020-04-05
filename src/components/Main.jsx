@@ -7,11 +7,11 @@ import {
   AppstoreOutlined,
   GithubOutlined,
   GitlabOutlined,
-  TwitterOutlined
+  TwitterOutlined,
 } from "@ant-design/icons";
 import {
   VerticalTimeline,
-  VerticalTimelineElement
+  VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { createFromIconfontCN } from "@ant-design/icons";
@@ -21,14 +21,14 @@ import "../static/css/main.css";
 
 const { Content, Footer, Header } = Layout;
 const IconFont = createFromIconfontCN({
-  scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
+  scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js",
 });
 
 class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: "about"
+      current: "about",
     };
     this.works = {
       key: "works",
@@ -41,7 +41,7 @@ class Main extends React.Component {
           ),
           title: "大阪大学に寄付をするためのシステム",
           body:
-            "HTML, CSS, TypeScript, Angular, Python, Django Rest Frameworkで作成"
+            "HTML, CSS, TypeScript, Angular, Python, Django Rest Frameworkで作成",
         },
         {
           tagName: this.makeATag(
@@ -49,22 +49,22 @@ class Main extends React.Component {
             "Portfolio"
           ),
           title: "私のポートフォリオ(このページ)",
-          body: "React, Ant Design, GitHub Pagesで作成"
+          body: "React, Ant Design, GitHub Pagesで作成",
         },
         {
           tagName: this.makeATag("https://store.artill.jp/", "Artill ECサイト"),
           title: "アート作品を売買するためのECサイト",
-          body: "React, Reduxで作成中"
+          body: "React, Reduxで作成中",
         },
         {
           tagName: this.makeATag(
-            "https://baseball-2709f.firebaseapp.com/",
+            "baseball-data-park.com/",
             "Baseball Data Park"
           ),
           title: "野球に関する情報情報を集めたサイト",
-          body: "React, Redux, Firebase, Python + Scrapingで作成中"
-        }
-      ]
+          body: "React, Redux, Firebase, Python + Scrapingで作成中",
+        },
+      ],
     };
     this.skillsContens = {
       key: "skills",
@@ -80,8 +80,8 @@ class Main extends React.Component {
         "Angular",
         "Django Rest Framework",
         "Git",
-        "Docker"
-      ]
+        "Docker",
+      ],
     };
     this.researchContens = {
       key: "research",
@@ -91,8 +91,8 @@ class Main extends React.Component {
         "ディジタル信号処理",
         "半導体レーザ",
         "FPGA",
-        "ネットワーク"
-      ]
+        "ネットワーク",
+      ],
     };
   }
   makeATag = (link, body) => (
@@ -106,7 +106,7 @@ class Main extends React.Component {
         style={{
           position: "fixed",
           zIndex: 1,
-          width: "100%"
+          width: "100%",
         }}
       >
         <Menu
@@ -153,14 +153,14 @@ class Main extends React.Component {
         <h1 style={{ textAlign: "center" }}>About</h1>
         <div
           style={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           <Avatar src={Icon} size={128} />
         </div>
         <div
           style={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
           <table border="0" align="center">
@@ -232,7 +232,7 @@ class Main extends React.Component {
               date="April  2016 - March 2020"
               iconStyle={{
                 background: "rgb(33, 150, 243)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -248,7 +248,7 @@ class Main extends React.Component {
               date="May 2017 - April 2019"
               iconStyle={{
                 background: "rgb(233, 30, 99)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -274,7 +274,7 @@ class Main extends React.Component {
               date="July 2019"
               iconStyle={{
                 background: "rgb(16, 204, 82)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -300,7 +300,7 @@ class Main extends React.Component {
               date="August 2019"
               iconStyle={{
                 background: "rgb(16, 204, 82)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -319,7 +319,7 @@ class Main extends React.Component {
               date="September 2019"
               iconStyle={{
                 background: "rgb(16, 204, 82)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -339,7 +339,7 @@ class Main extends React.Component {
               date="December 2019"
               iconStyle={{
                 background: "rgb(16, 204, 82)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -358,7 +358,7 @@ class Main extends React.Component {
               date="October 2019 - present"
               iconStyle={{
                 background: "rgb(233, 30, 99)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -381,7 +381,7 @@ class Main extends React.Component {
               date="September 2019"
               iconStyle={{
                 background: "rgb(16, 204, 82)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -401,7 +401,7 @@ class Main extends React.Component {
               date="April 2020 -"
               iconStyle={{
                 background: "rgb(33, 150, 243)",
-                color: "#fff"
+                color: "#fff",
               }}
             >
               <h2
@@ -419,8 +419,8 @@ class Main extends React.Component {
       </Content>
     );
   };
-  content = body => <div style={{ textAlign: "center" }}>{body}</div>;
-  makeWorks = item => {
+  content = (body) => <div style={{ textAlign: "center" }}>{body}</div>;
+  makeWorks = (item) => {
     return (
       <Content
         id={item.key}
@@ -433,7 +433,7 @@ class Main extends React.Component {
           <h1 style={{ textAlign: "center" }}>{item.value}</h1>
         </div>
         <div style={{ textAlign: "center" }}>
-          {item.data.map(item => (
+          {item.data.map((item) => (
             <Popover
               content={this.content(item.body)}
               title={item.title}
@@ -450,7 +450,7 @@ class Main extends React.Component {
       </Content>
     );
   };
-  makeTagContents = item => {
+  makeTagContents = (item) => {
     return (
       <Content
         id={item.key}
@@ -463,7 +463,7 @@ class Main extends React.Component {
           <h1 style={{ textAlign: "center" }}>{item.value}</h1>
         </div>
         <div style={{ textAlign: "center" }}>
-          {item.data.map(item => (
+          {item.data.map((item) => (
             <Tag color="processing">{item}</Tag>
           ))}
         </div>
@@ -503,9 +503,9 @@ class Main extends React.Component {
       </Footer>
     );
   };
-  handleClick = e => {
+  handleClick = (e) => {
     this.setState({
-      current: e.key
+      current: e.key,
     });
     const element = document.getElementById(e.key);
     const rect = element.getBoundingClientRect();
