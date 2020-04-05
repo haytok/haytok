@@ -58,7 +58,7 @@ class Main extends React.Component {
         },
         {
           tagName: this.makeATag(
-            "baseball-data-park.com/",
+            "https://baseball-data-park.com/",
             "Baseball Data Park"
           ),
           title: "野球に関する情報情報を集めたサイト",
