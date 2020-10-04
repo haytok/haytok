@@ -1,3 +1,3 @@
-## デプロイ方法
+## How to deploy
 - `npm run build`
 - `npm run deploy`
