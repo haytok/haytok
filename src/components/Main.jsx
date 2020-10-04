@@ -1,6 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 import "../App.css";
-import { Menu, Layout, Tag, Avatar, Popover } from "antd";
+import { Menu, Layout, Tag, Avatar, Popover, BackTop } from "antd";
 import "antd/es/menu/style";
 import {
   HomeOutlined,
@@ -8,6 +9,7 @@ import {
   GithubOutlined,
   GitlabOutlined,
   TwitterOutlined,
+  VerticalAlignTopOutlined,
 } from "@ant-design/icons";
 import {
   VerticalTimeline,
@@ -23,6 +25,18 @@ const { Content, Footer, Header } = Layout;
 const IconFont = createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js",
 });
+
+const BackTopContent = styled.div`
+  height: 40px;
+  width: 40px;
+  lineheight: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: #1890ff;
+  text-align: center;
+  font-size: 24px;
+  border-color: #1890ff;
+`;
 
 class Main extends React.Component {
   constructor(props) {
@@ -83,6 +97,30 @@ class Main extends React.Component {
         "Docker",
       ],
     };
+    this.articles = {
+      key: "articles",
+      value: "Articles",
+      data: [
+        {
+          tagName: this.makeATag(
+            "https://dilmnqvo.hatenablog.com/entry/2020/09/11/182152",
+            "はてなインターン2020 に参加してきた"
+          ),
+        },
+        {
+          tagName: this.makeATag(
+            "https://qiita.com/HK-41/items/6f9ddf5978359779bb57",
+            "RaspberryPiにDockerを使ってNginxでリバースプロキシを動かしてみた"
+          ),
+        },
+        {
+          tagName: this.makeATag(
+            "https://qiita.com/HK-41/items/72fd3f4d2b0b05e024c9",
+            "Raspberry Pi 3 Model B+にNginxとuWSGIを使ってFlaskを動かしてみた"
+          ),
+        },
+      ],
+    };
     this.researchContens = {
       key: "research",
       value: "Research Keywords",
@@ -132,6 +170,10 @@ class Main extends React.Component {
             <AppstoreOutlined />
             <a>Skills</a>
           </Menu.Item>
+          <Menu.Item key="articles">
+            <AppstoreOutlined />
+            <a href="#articles">Articles</a>
+          </Menu.Item>
           <Menu.Item key="research">
             <AppstoreOutlined />
             <a>Research Keywords</a>
@@ -166,7 +208,7 @@ class Main extends React.Component {
           <table border="0" align="center">
             <tr>
               <th align="left">Name</th>
-              <td align="left">Kiwata Hayato</td>
+              <td align="left">Hayato Kiwata</td>
             </tr>
             <tr>
               <th align="left">University</th>
@@ -414,6 +456,120 @@ class Main extends React.Component {
                 光ファイバー通信の研究を行っています。
               </p>
             </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="August 2020"
+              iconStyle={{
+                background: "rgb(16, 204, 82)",
+                color: "#fff",
+              }}
+            >
+              <h2
+                className="vertical-timeline-element-title"
+                style={{ textAlign: "left" }}
+              >
+                日本経済新聞 サマーインターン 参加
+              </h2>
+              <p style={{ textAlign: "left" }}>
+                日経の記事データなど各種 API
+                や膨大なアクセスログデータを使ってデータ解析を行いました。
+              </p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="August 2020 ~ September 2020"
+              iconStyle={{
+                background: "rgb(16, 204, 82)",
+                color: "#fff",
+              }}
+            >
+              <h2
+                className="vertical-timeline-element-title"
+                style={{ textAlign: "left" }}
+              >
+                Chatwork サマーインターン 参加
+              </h2>
+              <p style={{ textAlign: "left" }}>
+                React + Redux + TypeScript
+                を使ったフロントエンドの開発をチームで行いました。
+              </p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="September 2020"
+              iconStyle={{
+                background: "rgb(16, 204, 82)",
+                color: "#fff",
+              }}
+            >
+              <h2
+                className="vertical-timeline-element-title"
+                style={{ textAlign: "left" }}
+              >
+                はてな サマーインターン 参加
+              </h2>
+              <p style={{ textAlign: "left" }}>
+                GO + gRPC + minikube + Docker
+                を使ってブログサービスを実装しました。
+                <a
+                  href="https://dilmnqvo.hatenablog.com/entry/2020/09/11/182152"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  参加記
+                </a>
+                はこちらからご覧になれます。
+              </p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="September 2020"
+              iconStyle={{
+                background: "rgb(16, 204, 82)",
+                color: "#fff",
+              }}
+            >
+              <h2
+                className="vertical-timeline-element-title"
+                style={{ textAlign: "left" }}
+              >
+                Amazom Web Services サマーインターン 参加
+              </h2>
+              <p style={{ textAlign: "left" }}>
+                Web アプリケーションのトラブルシューティングを行いました。
+              </p>
+            </VerticalTimelineElement>
+
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              date="September 2020"
+              iconStyle={{
+                background: "rgb(16, 204, 82)",
+                color: "#fff",
+              }}
+            >
+              <h2
+                className="vertical-timeline-element-title"
+                style={{ textAlign: "left" }}
+              >
+                ハウテレビジョン サマーインターン 参加
+              </h2>
+              <p style={{ textAlign: "left" }}>
+                React + Redux + Golang + Docker を使って
+                <a
+                  href="https://gaishishukatsu.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  外資就活
+                </a>
+                の追加機能の開発をチームで行いました。
+              </p>
+            </VerticalTimelineElement>
           </VerticalTimeline>
         </div>
       </Content>
@@ -465,6 +621,29 @@ class Main extends React.Component {
         <div style={{ textAlign: "center" }}>
           {item.data.map((item) => (
             <Tag color="processing">{item}</Tag>
+          ))}
+        </div>
+      </Content>
+    );
+  };
+  makeArticles = (item) => {
+    return (
+      <Content
+        id={item.key}
+        style={{ margin: "24px 16px 0", overflow: "initial" }}
+      >
+        <div
+          className="site-layout-background"
+          style={{ padding: 24, textAlign: "center" }}
+        >
+          <h1 style={{ textAlign: "center" }}>{item.value}</h1>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          {item.data.map((item) => (
+            <Tag color="processing">
+              {item.tagName}&nbsp;
+              <IconFont type="icon-tuichu" />
+            </Tag>
           ))}
         </div>
       </Content>
@@ -525,11 +704,17 @@ class Main extends React.Component {
             {this.makeExperiences()}
             {this.makeWorks(this.works)}
             {this.makeTagContents(this.skillsContens)}
+            {this.makeArticles(this.articles)}
             {this.makeTagContents(this.researchContens)}
             {this.makeProgramming()}
             {this.makeFooter()}
           </Layout>
         </Layout>
+        <BackTop>
+          <BackTopContent>
+            <VerticalAlignTopOutlined />
+          </BackTopContent>
+        </BackTop>
       </React.Fragment>
     );
   }
