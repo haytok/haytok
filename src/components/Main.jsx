@@ -20,6 +20,11 @@ import { createFromIconfontCN } from "@ant-design/icons";
 
 import Icon from "../static/images/images.jpg";
 import "../static/css/main.css";
+import { IoMdSchool } from "react-icons/io";
+import { SiPython, SiHatenabookmark, SiAmazonaws } from "react-icons/si";
+import { BsNewspaper, BsChat } from "react-icons/bs";
+import { MdWebAsset, MdComputer } from "react-icons/md";
+import { FaDonate, FaServer, FaShoppingCart } from "react-icons/fa";
 
 const { Content, Footer, Header } = Layout;
 const IconFont = createFromIconfontCN({
@@ -214,7 +219,7 @@ class Main extends React.Component {
               <th align="left">University</th>
               <td align="left">
                 <a href="http://www1b.comm.eng.osaka-u.ac.jp/" target="_blank">
-                  大阪大学大学院 M1&nbsp;
+                  大阪大学大学院 M2&nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
               </td>
@@ -276,6 +281,7 @@ class Main extends React.Component {
                 background: "rgb(33, 150, 243)",
                 color: "#fff",
               }}
+              icon={<IoMdSchool />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -292,6 +298,7 @@ class Main extends React.Component {
                 background: "rgb(233, 30, 99)",
                 color: "#fff",
               }}
+              icon={<FaDonate />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -318,6 +325,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<SiPython />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -344,6 +352,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<MdWebAsset />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -363,6 +372,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<FaServer />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -383,6 +393,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<MdComputer />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -402,6 +413,7 @@ class Main extends React.Component {
                 background: "rgb(233, 30, 99)",
                 color: "#fff",
               }}
+              icon={<FaShoppingCart />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -425,6 +437,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<MdWebAsset />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -445,6 +458,7 @@ class Main extends React.Component {
                 background: "rgb(33, 150, 243)",
                 color: "#fff",
               }}
+              icon={<IoMdSchool />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -464,6 +478,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<BsNewspaper />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -484,6 +499,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<BsChat />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -504,6 +520,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<SiHatenabookmark />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -532,6 +549,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<SiAmazonaws />}
             >
               <h2
                 className="vertical-timeline-element-title"
@@ -551,6 +569,7 @@ class Main extends React.Component {
                 background: "rgb(16, 204, 82)",
                 color: "#fff",
               }}
+              icon={<MdWebAsset />}
             >
               <h2
                 className="vertical-timeline-element-title"
