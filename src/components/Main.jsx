@@ -211,10 +211,10 @@ class Main extends React.Component {
           }}
         >
           <table border="0" align="center">
-            <tr>
-              <th align="left">Name</th>
-              <td align="left">Hayato Kiwata</td>
-            </tr>
+//             <tr>
+//               <th align="left">Name</th>
+//               <td align="left">Hayato Kiwata</td>
+//             </tr>
             <tr>
               <th align="left">University</th>
               <td align="left">
