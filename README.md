@@ -1,3 +1,4 @@
-## How to deploy
-- `npm run build`
-- `npm run deploy`
+ # Hi there 🤞
+ 
+ - I'm a graduate student in Japan.
+ 
