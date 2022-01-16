@@ -30,5 +30,3 @@
 - [Goエラーハンドリング戦略](https://zenn.dev/nobonobo/articles/0b722c9c2b18d5) を参考に標準ライブラリを使ってログを吐き出すロジックを実装してみた。以下の画像のように GitHub Actions のログに吐き出されているのが確認できる。
 
 ![image](https://user-images.githubusercontent.com/44946173/149681842-09a39576-eaa9-4a91-b595-7d436cde6536.png)
-
-
