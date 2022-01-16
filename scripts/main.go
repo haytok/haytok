@@ -61,6 +61,12 @@ func writeREADME(filepath, content string) error {
 }
 
 func main() {
+	var (
+		writer io.Writer = os.Stderr
+		Info             = log.New(writer, "INFO: ", log.LstdFlags)
+		Error            = log.New(writer, "ERROR: ", log.LstdFlags)
+	)
+
 	url := "https://hakiwata.jp/index.xml"
 	readme := "# Hi there 🤞\n\n" +
 		"- I'm a graduate student in Japan.\n\n" +
@@ -70,18 +76,22 @@ func main() {
 
 	resXML, err := getRSSXML(url)
 	if err != nil {
-		log.Print("Failed to get RSS data")
+		Error.Print("Failed to get RSS data.")
 		return
 	}
 
 	xml.Unmarshal(resXML, &rss)
 	createNewREADME(&readme, rss, &numberOfContents)
 
-	log.Print(readme)
+	Info.Print(url)
+	Info.Print(readme)
 
 	filepath := "../README.md"
 	err = writeREADME(filepath, readme)
 	if err != nil {
-		log.Print("Failed to write a README.md")
+		Error.Print("Failed to write a README.md.")
+		return
 	}
+
+	Info.Print("Finished.")
 }
