@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/xml"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -35,7 +35,7 @@ func main() {
 	}
 	defer res.Body.Close()
 
-	resXML, _ := ioutil.ReadAll(res.Body)
+	resXML, _ := io.ReadAll(res.Body)
 
 	readme := "# Hi there 🤞\n\n" +
 		"- I'm a graduate student in Japan.\n\n" +
