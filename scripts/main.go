@@ -8,18 +8,9 @@ import (
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/dilmnqvovpnmlib/dilmnqvovpnmlib/model"
 )
-
-type Rss struct {
-	XMLName xml.Name `xml:"rss"`
-	Items   []Item   `xml:"channel>item"`
-}
-
-type Item struct {
-	XMLName xml.Name `xml:"item"`
-	Title   string   `xml:"title"`
-	Link    string   `xml:"link"`
-}
 
 func getRSSXML(url string) ([]byte, error) {
 	res, err := http.Get(url)
@@ -37,7 +28,7 @@ func getRSSXML(url string) ([]byte, error) {
 	return resXML, err
 }
 
-func createNewREADME(readme *string, rss Rss, numberOfContents *int) {
+func CreateNewREADME(readme *string, rss model.Rss, numberOfContents *int) {
 	numberOfTotalContents := len(rss.Items)
 
 	if *numberOfContents > numberOfTotalContents {
@@ -72,7 +63,7 @@ func main() {
 		"- I'm a graduate student in Japan.\n\n" +
 		"# Recent Posts on [My blog](https://hakiwata.jp)\n\n"
 	numberOfContents := 5
-	rss := Rss{}
+	rss := model.Rss{}
 
 	resXML, err := getRSSXML(url)
 	if err != nil {
@@ -81,7 +72,7 @@ func main() {
 	}
 
 	xml.Unmarshal(resXML, &rss)
-	createNewREADME(&readme, rss, &numberOfContents)
+	CreateNewREADME(&readme, rss, &numberOfContents)
 
 	Info.Print(url)
 	Info.Print(readme)
