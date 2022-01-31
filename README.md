@@ -4,7 +4,7 @@
 
 # Recent Posts on [My blog](https://hakiwata.jp)
 
-- [修士課程で初めて国内の研究会で発表してきた](https://hakiwata.jp/post/20220131/)
+- [修士課程で初めて国内の研究会で発表をしてきた](https://hakiwata.jp/post/20220131/)
 
 - [Vercel のドキュメントの修正をVercel Support に依頼してみた](https://hakiwata.jp/post/20220114/)
 
