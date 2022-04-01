@@ -1,6 +1,6 @@
 # Hi there 🤞
 
-- I'm a Cloud Support Associate at Amazon Web Services Japan GK.
+- I'm a graduate student in Japan.
 
 # Recent Posts on [My blog](https://hakiwata.jp)
 
