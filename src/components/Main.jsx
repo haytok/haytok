@@ -139,7 +139,7 @@ class Main extends React.Component {
     };
   }
   makeATag = (link, body) => (
-    <a href={link} target="_blank">
+    <a href={link}>
       {body}
     </a>
   );
@@ -218,7 +218,7 @@ class Main extends React.Component {
             <tr>
               <th align="center">University</th>
               <td align="left">
-                <a href="http://www1b.comm.eng.osaka-u.ac.jp/" target="_blank">
+                <a href="http://www1b.comm.eng.osaka-u.ac.jp/">
                   大阪大学大学院 M2&nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
@@ -229,7 +229,7 @@ class Main extends React.Component {
                 <TwitterOutlined />
               </th>
               <td align="left">
-                <a href="https://twitter.com/bilmnpvovqnmlid" target="_blank">
+                <a href="https://twitter.com/bilmnpvovqnmlid">
                   bilmnpvovqnmlid &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
@@ -240,7 +240,7 @@ class Main extends React.Component {
                 <GithubOutlined />
               </th>
               <td align="left">
-                <a href="https://github.com/haytok" target="_blank">
+                <a href="https://github.com/haytok">
                   haytok &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
@@ -251,7 +251,7 @@ class Main extends React.Component {
                 <GitlabOutlined />
               </th>
               <td align="left">
-                <a href="https://gitlab.com/dilmnqvovpnmlib" target="_blank">
+                <a href="https://gitlab.com/dilmnqvovpnmlib">
                   dilmnqvovpnmlib &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
@@ -310,7 +310,6 @@ class Main extends React.Component {
                 TypeScript + Angular, Python + Django Rest Framework を用いて
                 <a
                   href="https://www.miraikikin.osaka-u.ac.jp/donation/application"
-                  target="_blank"
                 >
                   大学の寄付システム
                 </a>
@@ -333,7 +332,6 @@ class Main extends React.Component {
               >
                 <a
                   href="https://icpc.iisf.or.jp/2019-yokohama/first-round-result/"
-                  target="_blank"
                 >
                   ICPC 国内予選&nbsp;
                 </a>
@@ -423,7 +421,7 @@ class Main extends React.Component {
               </h2>
               <p style={{ textAlign: "left" }}>
                 React, Redux を用いてアート作品の
-                <a href="http://store.artill.jp/" target="_blank">
+                <a href="http://store.artill.jp/">
                   ECサイト
                 </a>
                 のフロントエンドの開発を行っています。
@@ -533,7 +531,6 @@ class Main extends React.Component {
                 を使ってブログサービスを実装しました。
                 <a
                   href="https://dilmnqvo.hatenablog.com/entry/2020/09/11/182152"
-                  target="_blank"
                   rel="noreferrer noopener"
                 >
                   参加記
@@ -581,7 +578,6 @@ class Main extends React.Component {
                 React + Redux + Golang + Docker を使って
                 <a
                   href="https://gaishishukatsu.com/"
-                  target="_blank"
                   rel="noreferrer noopener"
                 >
                   外資就活
@@ -683,7 +679,6 @@ class Main extends React.Component {
             <Tag color="success">
               <a
                 href="https://atcoder.jp/users/dilmnqvovpnmlib?lang=ja"
-                target="_blank"
               >
                 AtCoder Rate : 854 &nbsp;
                 <IconFont type="icon-tuichu" />
