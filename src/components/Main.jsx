@@ -64,7 +64,7 @@ class Main extends React.Component {
         },
         {
           tagName: this.makeATag(
-            "https://dilmnqvovpnmlib.github.io/dilmnqvovpnmlib/",
+            "https://haytok.github.io/haytok/",
             "Portfolio"
           ),
           title: "私のポートフォリオ(このページ)",
@@ -211,12 +211,12 @@ class Main extends React.Component {
           }}
         >
           <table border="0" align="center">
-//             <tr>
-//               <th align="left">Name</th>
-//               <td align="left">Hayato Kiwata</td>
-//             </tr>
             <tr>
-              <th align="left">University</th>
+              <th align="center">Name</th>
+              <td align="left">Hayato KIWATA</td>
+            </tr>
+            <tr>
+              <th align="center">University</th>
               <td align="left">
                 <a href="http://www1b.comm.eng.osaka-u.ac.jp/" target="_blank">
                   大阪大学大学院 M2&nbsp;
@@ -225,7 +225,7 @@ class Main extends React.Component {
               </td>
             </tr>
             <tr>
-              <th align="left">
+              <th align="center">
                 <TwitterOutlined />
               </th>
               <td align="left">
@@ -236,18 +236,18 @@ class Main extends React.Component {
               </td>
             </tr>
             <tr>
-              <th align="left">
+              <th align="center">
                 <GithubOutlined />
               </th>
               <td align="left">
-                <a href="https://github.com/dilmnqvovpnmlib" target="_blank">
-                  dilmnqvovpnmlib &nbsp;
+                <a href="https://github.com/haytok" target="_blank">
+                  haytok &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
               </td>
             </tr>
             <tr>
-              <th align="left">
+              <th align="center">
                 <GitlabOutlined />
               </th>
               <td align="left">
@@ -697,7 +697,7 @@ class Main extends React.Component {
   makeFooter = () => {
     return (
       <Footer style={{ textAlign: "center" }}>
-        ©2020 Created by dilmnqvovpnmlib
+        ©2020 Created by haytok
       </Footer>
     );
   };
