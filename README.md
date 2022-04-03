@@ -1,6 +1,6 @@
 # Hi there 🤞
 
-- I'm a graduate student in Japan.
+- I'm a Cloud Support Associate.
 
 # Recent Posts on [My blog](https://hakiwata.jp)
 
