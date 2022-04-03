@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-deploy:
@@ -14,7 +15,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "10.x"
+          node-version: "17.x"
 
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -25,7 +26,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install
-        run: npm ci
+        run: npm install
 
       - name: Build
         run: npm run build
