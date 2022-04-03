@@ -1,6 +1,6 @@
 # 概要
 
-- Golang と GitHub Actons の `schedule` を用いて [dilmnqvovpnmlib/README.md](https://github.com/dilmnqvovpnmlib/dilmnqvovpnmlib/blob/gh-pages/README.md) を自動更新するためのアプリケーションを実装した。その時に行った作業ログなどを残す。
+- Golang と GitHub Actons の `schedule` を用いて [haytok/README.md](https://github.com/haytok/haytok/blob/gh-pages/README.md) を自動更新するためのアプリケーションを実装した。その時に行った作業ログなどを残す。
 
 ## ローカルで開発するために開発用サーバをセットアップする
 
