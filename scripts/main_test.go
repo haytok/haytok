@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/dilmnqvovpnmlib/dilmnqvovpnmlib/model"
+	"github.com/haytok/haytok/model"
 )
 
 var (

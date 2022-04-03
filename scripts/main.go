@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/dilmnqvovpnmlib/dilmnqvovpnmlib/model"
+	"github.com/haytok/haytok/model"
 )
 
 func getRSSXML(url string) ([]byte, error) {
@@ -60,7 +60,7 @@ func main() {
 
 	url := "https://hakiwata.jp/index.xml"
 	readme := "# Hi there 🤞\n\n" +
-		"- I'm a graduate student in Japan.\n\n" +
+		"- I'm a Cloud Support Associate.\n\n" +
 		"# Recent Posts on [My blog](https://hakiwata.jp)\n\n"
 	numberOfContents := 5
 	rss := model.Rss{}

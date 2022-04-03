@@ -1,3 +1,3 @@
-module github.com/dilmnqvovpnmlib/dilmnqvovpnmlib
+module github.com/haytok/haytok
 
 go 1.17
