@@ -12,6 +12,20 @@ import (
 	"github.com/haytok/haytok/model"
 )
 
+const (
+	baseBlogUrl    = "https://hakiwata.jp"
+	TemplateREADME = "./TEMPLATE_README.md"
+	filepath       = "../README.md"
+)
+
+var (
+	writer io.Writer = os.Stderr
+	Info             = log.New(writer, "INFO: ", log.LstdFlags)
+	Error            = log.New(writer, "ERROR: ", log.LstdFlags)
+
+	NumberOfContents = 5
+)
+
 func getRSSXML(url string) ([]byte, error) {
 	res, err := http.Get(url)
 	if err != nil {
@@ -26,6 +40,15 @@ func getRSSXML(url string) ([]byte, error) {
 	}
 
 	return resXML, err
+}
+
+func ReadREADME(filepath string) (string, error) {
+	content, err := os.ReadFile(filepath)
+	if err != nil {
+		return "", err
+	}
+
+	return string(content), nil
 }
 
 func CreateNewREADME(readme *string, rss model.Rss, numberOfContents *int) {
@@ -52,36 +75,26 @@ func writeREADME(filepath, content string) error {
 }
 
 func main() {
-	var (
-		writer io.Writer = os.Stderr
-		Info             = log.New(writer, "INFO: ", log.LstdFlags)
-		Error            = log.New(writer, "ERROR: ", log.LstdFlags)
-	)
+	readme, err := ReadREADME(TemplateREADME)
+	if err != nil {
+		Error.Printf("Failed to open a %s.", TemplateREADME)
+		return
+	}
 
-	baseUrl := "https://hakiwata.jp"
-	url := baseUrl + "/index.xml"
-	readme := fmt.Sprintf(
-		"# Hi there 🤞\n\n"+
-			"- I'm a Cloud Support Associate.\n\n"+
-			"# Recent Posts on [My blog](%s)\n\n",
-		baseUrl,
-	)
-	numberOfContents := 5
-	rss := model.Rss{}
-
-	resXML, err := getRSSXML(url)
+	rssUrl := baseBlogUrl + "/index.xml"
+	resXML, err := getRSSXML(rssUrl)
 	if err != nil {
 		Error.Print("Failed to get RSS data.")
 		return
 	}
 
+	rss := model.Rss{}
 	xml.Unmarshal(resXML, &rss)
-	CreateNewREADME(&readme, rss, &numberOfContents)
+	CreateNewREADME(&readme, rss, &NumberOfContents)
 
-	Info.Print(url)
+	Info.Print(rssUrl)
 	Info.Print(readme)
 
-	filepath := "../README.md"
 	err = writeREADME(filepath, readme)
 	if err != nil {
 		Error.Print("Failed to write a README.md.")
