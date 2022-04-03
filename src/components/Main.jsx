@@ -161,19 +161,19 @@ class Main extends React.Component {
         >
           <Menu.Item key="about">
             <HomeOutlined />
-            <a>About</a>
+            <a href="#about">About</a>
           </Menu.Item>
           <Menu.Item key="experiences">
             <AppstoreOutlined />
-            <a>Experiences</a>
+            <a href="#experiences">Experiences</a>
           </Menu.Item>
           <Menu.Item key="works">
             <AppstoreOutlined />
-            <a>Works</a>
+            <a href="#works">Works</a>
           </Menu.Item>
           <Menu.Item key="skills">
             <AppstoreOutlined />
-            <a>Skills</a>
+            <a href="#skills">Skills</a>
           </Menu.Item>
           <Menu.Item key="articles">
             <AppstoreOutlined />
@@ -181,11 +181,11 @@ class Main extends React.Component {
           </Menu.Item>
           <Menu.Item key="research">
             <AppstoreOutlined />
-            <a>Research Keywords</a>
+            <a href="#research">Research Keywords</a>
           </Menu.Item>
           <Menu.Item key="programming">
             <AppstoreOutlined />
-            <a>Competition Programming</a>
+            <a href="#programming">Competition Programming</a>
           </Menu.Item>
         </Menu>
       </Header>
