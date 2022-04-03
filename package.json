@@ -1,5 +1,5 @@
 {
-  "name": "dilmnqvovpnmlib",
+  "name": "haytok",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,7 @@
     "react-vertical-timeline-component": "^2.5.0",
     "styled-components": "^5.2.0"
   },
-  "homepage": "http://dilmnqvovpnmlib.github.io/dilmnqvovpnmlib",
+  "homepage": "http://haytok.github.io/haytok",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
