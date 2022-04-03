@@ -58,10 +58,14 @@ func main() {
 		Error            = log.New(writer, "ERROR: ", log.LstdFlags)
 	)
 
-	url := "https://hakiwata.jp/index.xml"
-	readme := "# Hi there 🤞\n\n" +
-		"- I'm a Cloud Support Associate.\n\n" +
-		"# Recent Posts on [My blog](https://hakiwata.jp)\n\n"
+	baseUrl := "https://hakiwata.jp"
+	url := baseUrl + "/index.xml"
+	readme := fmt.Sprintf(
+		"# Hi there 🤞\n\n"+
+			"- I'm a Cloud Support Associate.\n\n"+
+			"# Recent Posts on [My blog](%s)\n\n",
+		baseUrl,
+	)
 	numberOfContents := 5
 	rss := model.Rss{}
 
