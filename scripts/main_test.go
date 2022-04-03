@@ -2,18 +2,10 @@ package main
 
 import (
 	"encoding/xml"
-	"io"
-	"log"
 	"os"
 	"testing"
 
 	"github.com/haytok/haytok/model"
-)
-
-var (
-	writer io.Writer = os.Stderr
-	Info             = log.New(writer, "INFO: ", log.LstdFlags)
-	Error            = log.New(writer, "ERROR: ", log.LstdFlags)
 )
 
 func useIoutilReadFile(fileName string) ([]byte, error) {
@@ -61,10 +53,12 @@ func TestCreateNewREADME(t *testing.T) {
 		Info.Printf("%v Started.", tt.name)
 
 		// この実装箇所が納得いっていない。
-		readme := "# Hi there 🤞\n\n" +
-			"- I'm a graduate student in Japan.\n\n" +
-			"# Recent Posts on [My blog](https://hakiwata.jp)\n\n"
-		numberOfContents := 5
+		readme, err := ReadREADME(TemplateREADME)
+		if err != nil {
+			Error.Printf("Failed to open a %s.", TemplateREADME)
+			return
+		}
+
 		rss := model.Rss{}
 
 		t.Run(tt.name, func(t *testing.T) {
@@ -74,7 +68,7 @@ func TestCreateNewREADME(t *testing.T) {
 			}
 
 			xml.Unmarshal(resXML, &rss)
-			CreateNewREADME(&readme, rss, &numberOfContents)
+			CreateNewREADME(&readme, rss, &NumberOfContents)
 			expectedXML, err := useIoutilReadFile(tt.args.expected_filename)
 			if err != nil {
 				Error.Print("Invalid expected filepath.")
