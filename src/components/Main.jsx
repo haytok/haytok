@@ -251,8 +251,8 @@ class Main extends React.Component {
                 <GitlabOutlined />
               </th>
               <td align="left">
-                <a href="https://gitlab.com/dilmnqvovpnmlib">
-                  dilmnqvovpnmlib &nbsp;
+                <a href="https://gitlab.com/haytok">
+                  haytok &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
               </td>
