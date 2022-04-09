@@ -32,7 +32,6 @@ jobs:
 
       - name: RUn npm run bubild
         run: |
-          cd public
           npm run build
 
       - name: Deploy
