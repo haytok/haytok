@@ -43,9 +43,22 @@ jobs:
 
       - name: Update README.md on a gp-pages branch
         run: |
+          pwd
+          ls
+          echo git branch
+          git branch
+          echo ---
           git checkout gh-pages
+          git branch
+          echo ---
           git checkout master README.md
+          pwd
+          ls
+          git status
+          echo ---
           git add -N README.md
+          git status
+          echo ---
           if ! git diff --exit-code --quiet README.md
           then
             git config --global user.name haytok
