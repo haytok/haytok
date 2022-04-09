@@ -1,9 +1,6 @@
 name: Update README.md
 
 on:
-  push:
-    branches:
-      - master
   schedule:
     # UTC の 02:00 は JST だと 11:00 になる。
     - cron: '0 14 * * *'
