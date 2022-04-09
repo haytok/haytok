@@ -72,7 +72,7 @@ class Main extends React.Component {
         },
         {
           tagName: this.makeATag("https://store.artill.jp/", "Artill ECサイト"),
-          title: "アート作品を売買するためのECサイト",
+          title: "アート作品を売買するための EC サイト",
           body: "React, Reduxで作成中",
         },
         {
