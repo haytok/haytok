@@ -338,8 +338,8 @@ class Main extends React.Component {
                 参加
               </h2>
               <p style={{ textAlign: "left" }}>
-                予選参加チーム全体で、495チーム中75位、大学中では7チーム中2位でした。
-                チーム名はContrabassでした。
+                予選参加チーム全体で、495 チーム中 75 位、大学中では 7 チーム中 2 位でした。
+                チーム名は Contrabass でした。
               </p>
             </VerticalTimelineElement>
 
