@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/haytok/static/css/main.27caf8b1.css",
-    "main.js": "/haytok/static/js/main.6c302e29.js",
+    "main.js": "/haytok/static/js/main.cc15ea6a.js",
     "index.html": "/haytok/index.html",
     "static/media/default.less": "/haytok/static/media/default.003f90b383291c3b90da.less",
     "static/media/index.less": "/haytok/static/media/index.512735b3dccd7d4b3088.less",
     "main.27caf8b1.css.map": "/haytok/static/css/main.27caf8b1.css.map",
-    "main.6c302e29.js.map": "/haytok/static/js/main.6c302e29.js.map"
+    "main.cc15ea6a.js.map": "/haytok/static/js/main.cc15ea6a.js.map"
   },
   "entrypoints": [
     "static/css/main.27caf8b1.css",
-    "static/js/main.6c302e29.js"
+    "static/js/main.cc15ea6a.js"
   ]
 }
