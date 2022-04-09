@@ -1,4 +1,4 @@
  # Hi there 🤞
  
- - I'm a Engineer in Japan.
+ - I'm an Engineer in Japan.
  
