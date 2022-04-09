@@ -39,5 +39,6 @@ jobs:
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           publish_dir: ./build
+          publish_dir: ./build
+          destination_dir: docs
           keep_files: true
