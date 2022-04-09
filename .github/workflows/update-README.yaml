@@ -25,7 +25,7 @@ jobs:
           cd scripts
           go run main.go
 
-      - name: Update README.md
+      - name: Update README.md on a master branch
         run: |
           git add -N README.md
           if ! git diff --exit-code --quiet README.md
@@ -35,5 +35,20 @@ jobs:
             git pull
             git add README.md
             git commit -m 'update README.md'
-            git push origin master
+            git push origin HEAD
+          fi
+
+      - name: Update README.md on a gp-pages branch
+        run: |
+          git checkout gh-pages
+          git checkout master README.md
+          git add -N README.md
+          if ! git diff --exit-code --quiet README.md
+          then
+            git config --global user.name haytok
+            git config --global user.email haytok@users.noreply.github.com
+            git pull
+            git add README.md
+            git commit -m 'update README.md'
+            git push origin HEAD
           fi
