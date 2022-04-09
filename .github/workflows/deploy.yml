@@ -31,8 +31,7 @@ jobs:
         run: npm ci
 
       - name: RUn npm run bubild
-        run: |
-          npm run build
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -41,4 +40,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           destination_dir: docs
-          keep_files: true
