@@ -41,14 +41,14 @@ jobs:
             git push origin HEAD
           fi
 
-      - name: Update README.md on a gp-pages branch
+      - name: Update README.md on a gh-pages branch
         run: |
           pwd
           ls
           echo git branch
           git branch
           echo ---
-          git checkout gh-pages
+          git checkout -b gh-pages
           git branch
           echo ---
           git checkout master README.md
