@@ -60,7 +60,7 @@ class Main extends React.Component {
           ),
           title: "大阪大学に寄付をするためのシステム",
           body:
-            "HTML, CSS, TypeScript, Angular, Python, Django Rest Frameworkで作成",
+            "HTML, CSS, TypeScript, Angular, Python, Django Rest Framework で作成",
         },
         {
           tagName: this.makeATag(
