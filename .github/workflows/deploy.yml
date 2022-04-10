@@ -40,4 +40,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           destination_dir: docs
-          exclude_assets: ''
+          exclude_assets: '.github'
