@@ -30,7 +30,7 @@ jobs:
       - name: Run npm ci
         run: npm ci
 
-      - name: RUn npm run bubild
+      - name: Run npm run bubild
         run: npm run build
 
       - name: Deploy
