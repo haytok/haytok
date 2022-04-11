@@ -678,7 +678,7 @@ class Main extends React.Component {
           <div style={{ textAlign: "center" }}>
             <Tag color="success">
               <a
-                href="https://atcoder.jp/users/dilmnqvovpnmlib?lang=ja"
+                href="https://atcoder.jp/users/haytok?lang=ja"
               >
                 AtCoder Rate : 854 &nbsp;
                 <IconFont type="icon-tuichu" />
