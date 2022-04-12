@@ -229,7 +229,7 @@ class Main extends React.Component {
                 <TwitterOutlined />
               </th>
               <td align="left">
-                <a href="https://twitter.com/bilmnpvovqnmlid">
+                <a href="https://twitter.com/haytok6">
                   bilmnpvovqnmlid &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
