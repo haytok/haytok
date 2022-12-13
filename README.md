@@ -1,7 +1,7 @@
-# Hi there 🤞
+<!-- # Hi there 🤞 -->
 
 <!-- - I'm a Cloud Support Associate at Amazon Web Services Japan GK. -->
-- I'm an Engineer in Japan.
+<!-- - I'm an Engineer in Japan.
 
 # Recent Posts on [My blog](https://hakiwata.jp)
 
@@ -14,3 +14,4 @@
 - [2021 年を振り返って](https://hakiwata.jp/post/20211231/)
 
 - [自己紹介 (大学・大学院時代)](https://hakiwata.jp/post/20211204/)
+ -->
