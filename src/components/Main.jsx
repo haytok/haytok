@@ -94,6 +94,7 @@ class Main extends React.Component {
         "JavaScript",
         "TypeScript",
         "Python",
+        "Golang",
         "React",
         "Vue",
         "Angular",
@@ -215,7 +216,7 @@ class Main extends React.Component {
               <th align="center">Name</th>
               <td align="left">Hayato KIWATA</td>
             </tr>
-            <tr>
+            {/* <tr>
               <th align="center">University</th>
               <td align="left">
                 <a href="http://www1b.comm.eng.osaka-u.ac.jp/">
@@ -223,14 +224,14 @@ class Main extends React.Component {
                   <IconFont type="icon-tuichu" />
                 </a>
               </td>
-            </tr>
+            </tr> */}
             <tr>
               <th align="center">
                 <TwitterOutlined />
               </th>
               <td align="left">
                 <a href="https://twitter.com/haytok6">
-                  bilmnpvovqnmlid &nbsp;
+                  haytok6 &nbsp;
                   <IconFont type="icon-tuichu" />
                 </a>
               </td>
